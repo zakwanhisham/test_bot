@@ -18,7 +18,7 @@ async fn main() {
 }
 
 #[derive(BotCommands, Clone)]
-#[command(rename = "lowercase", description = "These command are supported:")]
+#[command(rename = "lowercase", description = "These are the supported command:")]
 enum Command {
     #[command(description = "display this text.")]
     Help,
