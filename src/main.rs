@@ -1,3 +1,6 @@
+/*
+THE FIRST HALF OF THE CODE IS FOR DICE AND COMMAND EXAMPLE
+ */
 // use std::error::Error;
 // use teloxide::{prelude::*, utils::command::BotCommands};
 
@@ -52,6 +55,10 @@
 //     };
 //     Ok(())
 // }
+
+/*
+THE SECOND HALF IS FOR "CONVERSATION" EXAMPLE
+*/
 
 use std::error::Error;
 use teloxide::{dispatching::dialogue::InMemStorage, prelude::*};
