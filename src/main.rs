@@ -208,8 +208,8 @@ async fn main() -> Result<(), Box<dyn Error>> {
 
     let handler = dptree::entry()
         .branch(Update::filter_message().endpoint(message_handler))
-        .branch(Update::filter_message().endpoint(callback_handler))
-        .branch(Update::filter_message().endpoint(inline_query_handler));
+        .branch(Update::filter_callback_query().endpoint(callback_handler))
+        .branch(Update::filter_inline_query().endpoint(inline_query_handler));
 
     Dispatcher::builder(bot, handler)
         .enable_ctrlc_handler()
@@ -219,7 +219,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
-// Creates a keyboard made by buttons in a big colums.
+// Creates a keyboard made by buttons in a big columns.
 fn make_keyboard() -> InlineKeyboardMarkup {
     let mut keyboard: Vec<Vec<InlineKeyboardButton>> = vec![];
 
